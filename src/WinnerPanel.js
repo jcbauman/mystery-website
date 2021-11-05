@@ -2,12 +2,7 @@ import './App.css';
 import {kzscNewsAudio} from './audio';
 import {boardwalkGif} from './images';
 
-
-interface WinnerPanelProps {
-
-}
-
-export default function WinnerPanel(props:WinnerPanelProps){
+export default function WinnerPanel(){
 
     return(
         <div>

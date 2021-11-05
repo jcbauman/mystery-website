@@ -1,6 +1,5 @@
 import {useState,useEffect} from 'react';
 import './App.css';
-import FormModal from "./FormModal";
 import {allDocuments, getDocuments, getPrompt, getAnswer, getCorrectDocs,suspectList} from './formConfigs';
 
 interface FormComponentProps {

@@ -1,0 +1,48 @@
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.fade-in-long{
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 10s;
+}
+
+.skipText{
+	position:absolute;
+	bottom:20px;
+	right:20px;
+}
+
+.skipText:hover{
+	cursor:pointer;
+	color:red;
+}
+
+.hideInit{
+	display:none;
+	height:200px;
+}
+
+.showInit{
+	display:block;
+}
+
