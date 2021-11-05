@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-*{
-  font-family: "Courier New",sans-serif;
+* {
+  font-family: "Courier New", sans-serif;
 }
 
 .App-logo {
@@ -26,89 +26,87 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.menuBox{
-  padding:10px;
-  margin:10px;
+.menuBox {
+  padding: 10px;
+  margin: 10px;
   border-radius: 4px;
   background-color: darkred;
-  border:1px solid darkred;
-  color:white;
+  border: 1px solid darkred;
+  color: white;
   font-size: 20px;
-  flex-flow:column wrap;
+  flex-flow: column wrap;
 }
 
-.menuBox:hover{
-  cursor:pointer;
+.menuBox:hover {
+  cursor: pointer;
   background-color: red;
-  color:black;
-  transform:scale(1.1,1.1);
-  transition:.5s;
+  color: black;
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
 }
 
-.formBox{
+.formBox {
   width: 85vw;
 }
 
-.col{
+.col {
   columns: 1 auto;
 }
 
-@media only screen and (min-width:960px) {
+@media only screen and (min-width: 960px) {
   .formBox {
     width: 62vw;
   }
 
-  .col{
-  columns: 2 auto;
-}
+  .col {
+    columns: 2 auto;
+  }
 
   .modalWindow {
-    width: 50%!important;
-    margin-left: 25%!important;
-    margin-top: 10%!important;
-    min-height: 50%!important;
-    height:max-content;
+    width: 50% !important;
+    margin-left: 25% !important;
+    margin-top: 10% !important;
+    min-height: 50% !important;
+    height: max-content;
   }
 }
 
-.blur{
-  width:100vw;
-  height:100vh;
+.blur {
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
-  position:fixed;
-  background-color: rgba(0,0,0,.7);
-
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.modalWindow{
+.modalWindow {
   z-index: 2;
-  position:fixed;
-  width:85%;
-  margin-top:20%;
-  min-height:50%;
-  margin-left:5%;
-  color:black;
+  position: fixed;
+  width: 85%;
+  margin-top: 20%;
+  min-height: 50%;
+  margin-left: 5%;
+  color: black;
   border: 2px solid darkred;
   background: lightslategrey;
-  border-radius:  10px;
-  padding:20px;
+  border-radius: 10px;
+  padding: 20px;
 }
 
-.modalImage{
-  width:80%;
-  padding:0 10%;
-  border-radius:10px;
+.modalImage {
+  width: 80%;
+  padding: 0 10%;
+  border-radius: 10px;
 }
 
-.nonEvidenceImage{
-  border-radius:10px;
+.nonEvidenceImage {
+  border-radius: 10px;
 }
 
 /*Checkbox*/
@@ -181,21 +179,41 @@
   transform: rotate(45deg);
 }
 
-select{
+select {
   column-span: all;
-  column:break-after;
-  width:150px;
-  height:40px;
+  column: break-after;
+  width: 150px;
+  height: 40px;
 }
 
-select label{
-  padding:10px;
+select label {
+  padding: 10px;
 }
 
-select:hover{
+select:hover {
   cursor: pointer;
 }
-.winnerImage{
-    width: 90%;
+.winnerImage {
+  width: 90%;
   border-radius: 10px;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
