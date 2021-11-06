@@ -163,17 +163,14 @@ export default function FormComponent(props: FormComponentProps) {
       return (
         <div className="formBox">
           <p>{getPrompt(formType)}</p>
-          <form className="search-bar">
-            <input
-              type="search"
-              className="searchy"
-              pattern=".*\S.*"
-              defaultValue={searchKey}
-              onChange={(e) => setSearchKey(e.target.value.toLowerCase())}
-              placeholder="Search for a document"
-            />
-          </form>
-          <form className="col search-bar">
+          <input
+            type="search"
+            className="searchBar"
+            defaultValue={searchKey}
+            onChange={(e) => setSearchKey(e.target.value.toLowerCase())}
+            placeholder="Search for a document"
+          />
+          <form className="col">
             {getDocumentsWithFilter(formType, searchKey, filteredDocs)
               .sort((a, b) => (a.title > b.title ? 1 : -1))
               .map((doc: { title: string, id: string }) => (
