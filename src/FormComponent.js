@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import "./searchBar.css";
 import {
   allDocuments,
   getDocuments,
@@ -7,6 +8,7 @@ import {
   getAnswer,
   getCorrectDocs,
   suspectList,
+  getFilterDocuments,
 } from "./formConfigs";
 
 interface FormComponentProps {
@@ -38,6 +40,8 @@ export default function FormComponent(props: FormComponentProps) {
   const [formState, setFormState] = useState(
     allDocuments.reduce((acc, curr) => ((acc[curr.id] = false), acc), {})
   );
+  const [searchKey, setSearchKey] = useState("");
+  const [filteredDocs, setFilteredDocs] = useState([]);
 
   const formSubmit = () => {
     let count = 0;
@@ -97,6 +101,16 @@ export default function FormComponent(props: FormComponentProps) {
     setFormError({ show: false, title: "", subtitle: "", type: "none" });
   }, [formType]);
 
+  //search for a doc
+  useEffect(() => {
+    if (searchKey.length > 0) {
+      let documents = getFilterDocuments(formType, searchKey);
+      setFilteredDocs(documents);
+    } else {
+      setFilteredDocs([]);
+    }
+  }, [searchKey, formType]);
+
   const onCheckboxChange = (e) => {
     let newState = { ...formState };
     newState[e.target.id] = e.target.checked;
@@ -117,6 +131,14 @@ export default function FormComponent(props: FormComponentProps) {
       });
     } else {
       setFormType(e.target.id);
+    }
+  };
+
+  const getDocumentsWithFilter = (formType, searchKey, filteredDocs) => {
+    if (searchKey.length === 0) {
+      return getDocuments(formType);
+    } else {
+      return filteredDocs;
     }
   };
 
@@ -141,8 +163,18 @@ export default function FormComponent(props: FormComponentProps) {
       return (
         <div className="formBox">
           <p>{getPrompt(formType)}</p>
-          <form className="col">
-            {getDocuments(formType)
+          <form className="search-bar">
+            <input
+              type="search"
+              className="searchy"
+              pattern=".*\S.*"
+              defaultValue={searchKey}
+              onChange={(e) => setSearchKey(e.target.value.toLowerCase())}
+              placeholder="Search for a document"
+            />
+          </form>
+          <form className="col search-bar">
+            {getDocumentsWithFilter(formType, searchKey, filteredDocs)
               .sort((a, b) => (a.title > b.title ? 1 : -1))
               .map((doc: { title: string, id: string }) => (
                 <div>
