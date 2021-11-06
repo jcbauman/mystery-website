@@ -93,9 +93,8 @@
   min-height: 50%;
   margin-left: 5%;
   color: black;
-  border: 2px solid darkred;
-  background: lightslategrey;
-  border-radius: 10px;
+  background: gray;
+  border-radius: 15px;
   padding: 20px;
 }
 
