@@ -9,7 +9,6 @@ import boardwalkGif from "./boardwalkGif.gif";
 import hintBeachImage from "./santaCruzBeachBlack&White.png";
 import drivingNight from "./drivingNight.gif";
 import eyeGun from "./eyeGun.gif";
-import mysterySpotGirl from "./mysterySpotGirl.gif";
 import montysLog from "./montysLog.gif";
 import surferNight from "./surferNight.gif";
 import surferDrowing from "./surferDrowning.gif";
@@ -22,7 +21,9 @@ import drivingNaturalB from "./drivingNaturalB.gif";
 import naturalBridges from "./naturalB.gif";
 import autopsy from "./autopsy.gif";
 import surferDrownsPaper from "./surferDrowns.gif";
-import tides from "./tides.gif";
+import delMar from "./delMar.gif";
+import disco from "./disco.gif";
+import discoBall from "./discoBall.gif";
 
 export {
   mysterySpot,
@@ -36,7 +37,6 @@ export {
   hintBeachImage,
   drivingNight,
   eyeGun,
-  mysterySpotGirl,
   montysLog,
   surferDrowing,
   surferNight,
@@ -49,5 +49,7 @@ export {
   naturalBridges,
   autopsy,
   surferDrownsPaper,
-  tides,
+  disco,
+  delMar,
+  discoBall,
 };

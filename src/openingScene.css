@@ -1,48 +1,58 @@
 .fade-in {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 2s;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 
 @keyframes fadeInOpacity {
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.fade-in-long{
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 10s;
+.fade-in-long {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 10s;
 }
 
-.skipText{
-	position:absolute;
-	bottom:20px;
-	right:20px;
+.skipText {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 18px;
 }
 
-.skipText:hover{
-	cursor:pointer;
-	color:red;
+.skipText:hover {
+  cursor: pointer;
+  color: red;
 }
 
-.hideInit{
-	display:none;
-	height:200px;
+.hideInit {
+  display: none;
 }
 
-.showInit{
-	display:block;
+.showInit {
+  display: block;
+  margin: 5vh 5vw;
+  max-width: 95vw;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
 }
 
+.fixedCenterButton {
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+}

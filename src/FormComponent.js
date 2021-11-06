@@ -63,10 +63,8 @@ export default function FormComponent(props: FormComponentProps) {
       let validation = { correct: true, count: 0 };
       targetDocs.map((doc) => {
         if (formState[doc] === true) {
-          console.log("true", formState[doc], doc);
           validation.count = validation.count + 1;
         } else {
-          console.log("false", formState[doc], doc);
           validation.correct = false;
         }
         return 0;

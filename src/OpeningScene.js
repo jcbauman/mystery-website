@@ -5,19 +5,20 @@ import { openingTheme } from "./audio";
 import {
   autopsy,
   boardwalkGif,
+  delMar,
+  disco,
+  discoBall,
   drivingNaturalB,
   drivingNight,
   eyeGun,
   giantDipper,
   montysLog,
-  mysterySpotGirl,
   naturalBridges,
   pullingBodyOcean,
   smoking,
   surferDrowing,
   surferDrownsPaper,
   surferNight,
-  tides,
   train,
   trees,
 } from "./images";
@@ -29,10 +30,10 @@ export default function OpeningScene(props) {
   const itemOrderIds = [
     "openingTitle1",
     "naturalBridges",
-    "boardwalkGif",
+    "trees",
     "openingTitle2",
     "smoking",
-    "trees",
+    "delMar",
     "openingTitle3",
     "pullingBodyOcean",
     "surferNight",
@@ -46,15 +47,23 @@ export default function OpeningScene(props) {
     "montysLog",
     "openingTitle6",
     "surferDrownsPaper",
-    "tides",
+    "disco",
     "autopsy",
     "openingTitle7",
     "openingTitle8",
+    "discoBall",
+  ];
+
+  const itemTiming = [
+    0, -500, 500, 0, 0, 500, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0,
   ];
 
   useEffect(() => {
     if (startOpening) {
+      let offset = 0;
       itemOrderIds.map((itemId, index) => {
+        offset += itemTiming[index];
         setTimeout(function () {
           if (document.getElementById(itemId)) {
             document.getElementById(itemId).className = "showInit";
@@ -65,7 +74,7 @@ export default function OpeningScene(props) {
                 "hideInit";
             }
           }
-        }, (index + 1) * 3000);
+        }, (index + 1) * 3000 + offset);
       });
     }
   }, [startOpening]);
@@ -96,10 +105,10 @@ export default function OpeningScene(props) {
             Santa Cruz, CA
           </h1>
           <h3 id="openingTitle2" className="hideInit">
-            A new mystery from Rocko Bauman and Amira Wheeler
+            A new mystery from Rocko Bauman &amp; Amira Wheeler
           </h3>
           <h2 id="openingTitle3" className="hideInit">
-            A tragedy has occurred
+            Years ago, a tragedy occurred
           </h2>
           <h3 id="openingTitle4" className="hideInit">
             But is there more than meets the eye?
@@ -184,31 +193,36 @@ export default function OpeningScene(props) {
             src={naturalBridges}
             alt={"naturalBridges"}
           />
-          <img
-            id="tides"
-            className="hideInit"
-            src={tides}
-            alt={"naturalBridges"}
-          />
+          <img id="disco" className="hideInit" src={disco} alt={"disco"} />
+          <div id="discoBall" className="hideInit">
+            <img src={discoBall} className="showInit" alt={"disco"} />
+            <button
+              className="menuBox fixedCenterButton"
+              onClick={() => setSkipOpeningScene(true)}
+            >
+              Start investigation
+            </button>
+          </div>
           <img
             id="surferDrownsPaper"
             className="hideInit"
             src={surferDrownsPaper}
-            alt={"naturalBridges"}
+            alt={"surferDrownsPaper"}
           />
           <img
             id="autopsy"
             className="hideInit"
             src={autopsy}
-            alt={"naturalBridges"}
+            alt={"autopsy"}
           />
+          <img id="delMar" className="hideInit" src={delMar} alt={"delMar"} />
 
           <div
-            className="skipText fade-in-long"
+            className="skipText fade-in"
             id="skipButton"
             onClick={() => setSkipOpeningScene(true)}
           >
-            <p>Skip</p>
+            <p>SKIP</p>
           </div>
         </>
       ) : (
