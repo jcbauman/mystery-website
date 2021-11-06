@@ -82,12 +82,21 @@ export default function OpeningScene(props) {
   return (
     <div>
       {!startOpening ? (
-        <button
-          className="menuBox fade-in"
-          onClick={() => setStartOpening(true)}
-        >
-          Turn sound on to continue
-        </button>
+        <>
+          <p>Turn on sound to continue</p>
+          <button
+            className="menuBox fade-in"
+            onClick={() => setStartOpening(true)}
+          >
+            Begin
+          </button>
+          <button
+            className="secondaryMenuBox fade-in"
+            onClick={() => setSkipOpeningScene(true)}
+          >
+            Skip opening
+          </button>
+        </>
       ) : (
         ""
       )}

@@ -162,7 +162,10 @@ export default function FormModal(props: FormModalProps) {
           ""
         )}
         {formError.type === "tooFast" ? (
-          <button className="menuBox" onClick={() => continueBtnHandler()}>
+          <button
+            className="secondaryMenuBox"
+            onClick={() => continueBtnHandler()}
+          >
             I already solved that one
           </button>
         ) : (

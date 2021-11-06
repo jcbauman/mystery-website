@@ -209,7 +209,7 @@ export default function FormComponent(props: FormComponentProps) {
               Submit
             </button>
             <button
-              className="menuBox"
+              className="secondaryMenuBox"
               type="button"
               onClick={() => setFormType("menu")}
             >

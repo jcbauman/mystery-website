@@ -43,6 +43,27 @@
   flex-flow: column wrap;
 }
 
+.secondaryMenuBox {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid darkred;
+  color: white;
+  font-size: 20px;
+  flex-flow: column wrap;
+  cursor: pointer;
+}
+
+.secondaryMenuBox:hover {
+  cursor: pointer;
+  background-color: red;
+  color: black;
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
+  border: 2px solid red;
+}
+
 .menuBox:hover {
   cursor: pointer;
   background-color: red;
