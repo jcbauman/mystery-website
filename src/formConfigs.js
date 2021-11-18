@@ -123,7 +123,7 @@ export const allDocuments = getDocuments(4);
 
 export const getPrompt = (obj: number) => {
   const prompts = [
-    "1.) Which TWO documents suggest that something is off about the death of Karlo Ramos?",
+    "1.) Which TWO documents suggest that something is off about the death of Karlo Reeves?",
     "2.) Which TWO documents suggest where Karlo was actually headed the night he died?",
     "3.) Which THREE documents suggest who Karlo fought with at the store?",
     "4.) Which TWO documents break one suspect's airtight alibi?",
