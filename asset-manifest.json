@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/mystery-website/static/css/main.758f0e46.chunk.css",
-    "main.js": "/mystery-website/static/js/main.1c0baaa6.chunk.js",
-    "main.js.map": "/mystery-website/static/js/main.1c0baaa6.chunk.js.map",
+    "main.css": "/mystery-website/static/css/main.ed2a8626.chunk.css",
+    "main.js": "/mystery-website/static/js/main.eac84295.chunk.js",
+    "main.js.map": "/mystery-website/static/js/main.eac84295.chunk.js.map",
     "runtime-main.js": "/mystery-website/static/js/runtime-main.e163da69.js",
     "runtime-main.js.map": "/mystery-website/static/js/runtime-main.e163da69.js.map",
     "static/js/2.f6568ec2.chunk.js": "/mystery-website/static/js/2.f6568ec2.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.da864340.chunk.js": "/mystery-website/static/js/3.da864340.chunk.js",
     "static/js/3.da864340.chunk.js.map": "/mystery-website/static/js/3.da864340.chunk.js.map",
     "index.html": "/mystery-website/index.html",
-    "static/css/main.758f0e46.chunk.css.map": "/mystery-website/static/css/main.758f0e46.chunk.css.map",
+    "static/css/main.ed2a8626.chunk.css.map": "/mystery-website/static/css/main.ed2a8626.chunk.css.map",
     "static/js/2.f6568ec2.chunk.js.LICENSE.txt": "/mystery-website/static/js/2.f6568ec2.chunk.js.LICENSE.txt",
     "static/media/autopsy.f812f373.gif": "/mystery-website/static/media/autopsy.f812f373.gif",
     "static/media/bay federal.c2a780cd.png": "/mystery-website/static/media/bay federal.c2a780cd.png",
@@ -44,7 +44,7 @@
   "entrypoints": [
     "static/js/runtime-main.e163da69.js",
     "static/js/2.f6568ec2.chunk.js",
-    "static/css/main.758f0e46.chunk.css",
-    "static/js/main.1c0baaa6.chunk.js"
+    "static/css/main.ed2a8626.chunk.css",
+    "static/js/main.eac84295.chunk.js"
   ]
 }
