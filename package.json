@@ -1,8 +1,8 @@
 {
   "name": "murdermystery",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://jcbauman/github.io/mystery-website",
+  "private": false,
+  "homepage": "https://jcbauman.github.io/mystery-website",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",

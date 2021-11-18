@@ -30,6 +30,7 @@ const documents = [
     { title: "Tami Karlo Text Conversation", id: "21" },
     { title: "Witness Statement: Daniel Bratton, KZSC", id: "22" },
     { title: "Witness Statement: James Modesto", id: "23" },
+    { title: "Bus Schedule", id: "24" },
   ],
   [{ title: "Sentinel Clipping: Case Reopened", id: "30" }],
   [
@@ -67,7 +68,7 @@ const documentKeywords = [
   ["tami", "games", "karlo", "text", "screenshot", "tinder"],
   ["daniel", "witness", "bratton", "kzsc", "dj", "simone"],
   ["james", "modesto", "body", "witness", "statement"],
-  [],
+  ["bus", "schedule", "transit", "map"],
   [],
   [],
   [],
