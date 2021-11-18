@@ -92,8 +92,9 @@
 
   .modalWindow {
     width: 50% !important;
-    margin-left: 25% !important;
-    margin-top: 10% !important;
+    left: 25%;
+    top: 5vh !important;
+    margin: 0 !important;
     min-height: 50% !important;
     height: max-content;
   }

@@ -121,7 +121,7 @@ export default function FormModal(props: FormModalProps) {
 
   const continueBtnHandler = () => {
     if (formError.type === "success") {
-      setSolvedObjs(solvedObjs + 1);
+      setSolvedObjs(formError.obj + 1);
       setFormType("menu");
     } else if (formError.type === "tooFast") {
       setSolvedObjs(formError.obj || 1);

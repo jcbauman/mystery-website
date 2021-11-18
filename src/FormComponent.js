@@ -181,6 +181,7 @@ export default function FormComponent(props: FormComponentProps) {
                       type="checkbox"
                       value={doc.id}
                       id={doc.id}
+                      checked={formState[doc.id]}
                       name={formType}
                       onChange={(e) => onCheckboxChange(e)}
                     />
