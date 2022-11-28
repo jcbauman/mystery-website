@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import "./searchBar.css";
+import "./css/searchBar.css";
 import {
   allDocuments,
   getDocuments,
@@ -10,6 +10,7 @@ import {
   suspectList,
   getFilterDocuments,
 } from "./formConfigs";
+import { Button } from "./components/Button";
 
 interface FormComponentProps {
   formError: any;
@@ -148,14 +149,15 @@ export default function FormComponent(props: FormComponentProps) {
         <div className="fade-in">
           <h3>Which objective do you want to verify?</h3>
           {titles.map((button) => (
-            <button
-              className="menuBox"
+            <Button
+              // className="menuBox"
+              variant='contained'
               key={button.id}
               id={button.id}
               onClick={(e) => handleNewObjective(e)}
             >
               {button.title}
-            </button>
+            </Button>
           ))}
         </div>
       );

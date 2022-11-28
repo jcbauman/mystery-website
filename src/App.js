@@ -1,21 +1,15 @@
 import FormComponent from "./FormComponent";
-import { useState } from "react";
 import "./App.css";
 import FormModal from "./FormModal";
 import WinnerPanel from "./WinnerPanel";
 import OpeningScene from "./OpeningScene";
+import { useAppState } from "./hooks/useAppState";
 
 function App() {
-  const [formError, setFormError] = useState({
-    show: false,
-    title: "",
-    subtitle: "",
-    type: "none",
-  });
-  const [solvedObjs, setSolvedObjs] = useState(1);
-  const [formType, setFormType] = useState("menu");
-  const [hintCount, setHintCount] = useState([0, 0, 0, 0, 0]);
-  const [skipOpening, setSkipOpening] = useState(false);
+  const {
+    formError, setFormError, solvedObjs, setSolvedObjs, formType, setFormType,
+    hintCount,setHintCount,skipOpening,setSkipOpening
+  } = useAppState()
 
   const getMainComponent = () => {
     if (skipOpening) {

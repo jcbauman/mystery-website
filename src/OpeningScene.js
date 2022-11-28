@@ -1,5 +1,5 @@
 import "./App.css";
-import "./openingScene.css";
+import "./css/openingScene.css";
 import { useState, useEffect } from "react";
 import { openingTheme } from "./audio";
 import {
