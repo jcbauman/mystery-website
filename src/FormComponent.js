@@ -11,6 +11,7 @@ import {
   getFilterDocuments,
 } from "./formConfigs";
 import { Button } from "./components/Button";
+import { Checkbox } from "./components/Checkbox";
 
 interface FormComponentProps {
   formError: any;
@@ -177,19 +178,20 @@ export default function FormComponent(props: FormComponentProps) {
               .sort((a, b) => (a.title > b.title ? 1 : -1))
               .map((doc: { title: string, id: string }) => (
                 <div>
-                  <label className="container" key={doc}>
-                    {doc.title}
-                    <input
-                      type="checkbox"
-                      value={doc.id}
+                   {/* <label className="container" key={doc}> */}
+                    {/* {doc.title} */}
+                    <Checkbox
+                      // type="checkbox"
+                    value={doc.id}
+                    label={doc.title}
                       id={doc.id}
                       checked={formState[doc.id]}
                       name={formType}
                       onChange={(e) => onCheckboxChange(e)}
                     />
-                    <span className="checkmark" />
-                  </label>
-                </div>
+                     {/* <span className="checkmark" /> */}
+                   {/* </label> */}
+               </div>
               ))}
             {formType === "5" ? (
               <div>
