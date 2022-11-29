@@ -11,6 +11,7 @@ import {
   hintBeachImage,
 } from "./images";
 import { getHint } from "./formConfigs";
+import { Button } from "./components/Button";
 
 interface FormModalProps {
   formError: {
@@ -155,33 +156,33 @@ export default function FormModal(props: FormModalProps) {
         <h1>{formError.title}</h1>
         <h3>{formError.subtitle}</h3>
         {formError.type === "tooFast" ? (
-          <button className="menuBox" onClick={() => backButtonHandler()}>
+          <Button  onClick={() => backButtonHandler()} variant='contained'>
             Back to Safety
-          </button>
+          </Button>
         ) : (
           ""
         )}
         {formError.type === "tooFast" ? (
-          <button
-            className="secondaryMenuBox"
+          <Button
+            variant='outlined'
             onClick={() => continueBtnHandler()}
           >
             I already solved that one
-          </button>
+          </Button>
         ) : (
           ""
         )}
         {formError.type !== "tooFast" ? (
-          <button className="menuBox" onClick={() => continueBtnHandler()}>
+          <Button variant='contained' onClick={() => continueBtnHandler()}>
             {formError.type !== "success" ? "Try Again" : "Continue"}
-          </button>
+          </Button>
         ) : (
           ""
         )}
         {formError.type === "failure" ? (
-          <button className="menuBox" onClick={() => hintBtnHandler()}>
+          <Button variant='outlined' onClick={() => hintBtnHandler()}>
             I need a hint
-          </button>
+          </Button>
         ) : (
           ""
         )}

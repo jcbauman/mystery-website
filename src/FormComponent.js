@@ -12,6 +12,8 @@ import {
 } from "./formConfigs";
 import { Button } from "./components/Button";
 import { Checkbox } from "./components/Checkbox";
+import { Select } from "@mui/material";
+import { Box } from "@mui/system";
 
 interface FormComponentProps {
   formError: any;
@@ -117,6 +119,7 @@ export default function FormComponent(props: FormComponentProps) {
     let newState = { ...formState };
     newState[e.target.id] = e.target.checked;
     setFormState(newState);
+    console.log(formState)
     setFormError({ show: false, title: "", subtitle: "", type: "none" });
   };
 
@@ -151,7 +154,6 @@ export default function FormComponent(props: FormComponentProps) {
           <h3>Which objective do you want to verify?</h3>
           {titles.map((button) => (
             <Button
-              // className="menuBox"
               variant='contained'
               key={button.id}
               id={button.id}
@@ -177,21 +179,24 @@ export default function FormComponent(props: FormComponentProps) {
             {getDocumentsWithFilter(formType, searchKey, filteredDocs)
               .sort((a, b) => (a.title > b.title ? 1 : -1))
               .map((doc: { title: string, id: string }) => (
-                <div>
+                <Box sx={{height:'100%',overflow:'scroll',display:'flex',justifyContent:'flex-start'}}>
                    {/* <label className="container" key={doc}> */}
                     {/* {doc.title} */}
-                    <Checkbox
-                      // type="checkbox"
+                  <Checkbox
+                    controlled
                     value={doc.id}
                     label={doc.title}
                       id={doc.id}
                       checked={formState[doc.id]}
-                      name={formType}
-                      onChange={(e) => onCheckboxChange(e)}
+                    name={formType}
+                    onChange={(e) => {
+                      console.log('check')
+                      onCheckboxChange(e)
+                    }}
                     />
                      {/* <span className="checkmark" /> */}
                    {/* </label> */}
-               </div>
+               </Box>
               ))}
             {formType === "5" ? (
               <div>
@@ -206,20 +211,18 @@ export default function FormComponent(props: FormComponentProps) {
             ) : (
               ""
             )}
-            <button
-              className="menuBox"
-              type="button"
+            <Button
+              variant='contained'
               onClick={() => formSubmit()}
             >
               Submit
-            </button>
-            <button
-              className="secondaryMenuBox"
-              type="button"
+            </Button>
+            <Button
+variant='outlined'
               onClick={() => setFormType("menu")}
             >
               Back
-            </button>
+            </Button>
           </form>
         </div>
       );
